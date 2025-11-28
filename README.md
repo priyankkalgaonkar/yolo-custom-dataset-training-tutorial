@@ -36,7 +36,7 @@ This tutorial demonstrates how to:
 
 ### 2. Environment Setup
 The notebook automatically installs required packages:
-```bash
+```python
 pip install kaggle ultralytics
 ```
 
@@ -48,7 +48,7 @@ This tutorial uses the Head Detection CCTV Dataset from Kaggle, containing:
 
 ### ⚙️ Configuration
 #### Dataset YAML File
-The ```bash head_dataset.yaml ``` file configures:
+The ```python head_dataset.yaml``` file configures:
 - Training and validation image paths
 - Number of classes (1 - "head")
 - Class names
@@ -63,7 +63,7 @@ The ```bash head_dataset.yaml ``` file configures:
 ### 📊 Training
 Run the training cell to start the process:
 
-```bash
+```python
 from ultralytics import YOLO
 
 model = YOLO("yolov8s.pt")
@@ -87,8 +87,8 @@ After training, you can expect:
 The notebook automatically handles the "valid" to "val" folder renaming.
 
 ### Kaggle API Errors
-- Ensure ```bash kaggle.json ``` is properly uploaded
-- Check file permissions: ```bash chmod 600 /root/.kaggle/kaggle.json ```
+- Ensure ```python kaggle.json``` is properly uploaded
+- Check file permissions: ```python chmod 600 /root/.kaggle/kaggle.json```
 
 ### GPU Not Available
 In Colab: Runtime → Change runtime type → GPU
